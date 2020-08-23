@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { useFetch } from './components/hooks/useFetch'
 import { Weather } from './components/Weather'
+import { useFetch } from './components/hooks/useFetch'
 
 import './App.css'
 
@@ -16,7 +16,7 @@ function App () {
     sunset,
     sunrise,
     feelsLike,
-    humidity
+    humidity, weatherIcon
   ] = useFetch()
 
   return (
@@ -33,6 +33,7 @@ function App () {
         sunrise={sunrise}
         feelsLike={feelsLike}
         humidity={humidity}
+        weatherIcon={weatherIcon}
       />
     </div>
   )

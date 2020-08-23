@@ -13,6 +13,7 @@ export function useFetch () {
   const [sunrise, setSunrise] = useState(undefined)
   const [feelsLike, setFeelsLike] = useState(undefined)
   const [humidity, setHumidity] = useState(undefined)
+  const [weatherIcon, setWeatherIcon] = useState('')
 
   function convertToTime (timestamp) {
     const date = new Date(timestamp * 1000)
@@ -36,6 +37,7 @@ export function useFetch () {
         setSunrise(convertToTime(data.sys.sunrise))
         setFeelsLike(Math.floor(data.main.feels_like))
         setHumidity(data.main.humidity)
+        setWeatherIcon(data.weather[0].icon)
       })
     )
   }, [])
@@ -50,6 +52,7 @@ export function useFetch () {
     sunset,
     sunrise,
     feelsLike,
-    humidity
+    humidity,
+    weatherIcon
   ]
 }
