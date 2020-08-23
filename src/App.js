@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import { useFetch } from './components/hooks/useFetch'
+import { Weather } from './components/Weather'
+
+import './App.css'
+
+function App () {
+  const [
+    name,
+    country,
+    tempDescription,
+    temp,
+    tempMin,
+    tempMax,
+    sunset,
+    sunrise,
+    feelsLike,
+    humidity
+  ] = useFetch()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>The Weather App</h1>
+      <Weather
+        name={name}
+        country={country}
+        temp={temp}
+        description={tempDescription}
+        tempMin={tempMin}
+        tempMax={tempMax}
+        sunset={sunset}
+        sunrise={sunrise}
+        feelsLike={feelsLike}
+        humidity={humidity}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
