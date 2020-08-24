@@ -24,7 +24,7 @@ export function useFetch () {
 
   useEffect(() => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=Edinburgh,uk&units=metric&APPID=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=Edinburgh,uk&units=metric&APPID=${apiKey}`
     ).then(response =>
       response.json().then(data => {
         setName(data.name)
