@@ -1,4 +1,5 @@
-## The Weather App - https://diegodinizz.github.io/5-day-forecast/
+## The Weather App
+https://diegodinizz.github.io/5-day-forecast/
 
 An application used to check the currently Edinburgh - UK forecast, built with React, Styled Components, OpenWeatherMap 5 day weather forecast API and hosted on GitHub Pages.
 
