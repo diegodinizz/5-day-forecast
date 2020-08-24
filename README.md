@@ -40,7 +40,7 @@ The project is hosted on [Gh Pages](https://pages.github.com) at https://diegodi
 
 ## Reflection
 
-This was a weekend-long project built as a short technical exercise. Project goals included building a single HTML page displaying the 5-day weather forecast for a location of your choice.  
+This was a weekend-long project built as a short technical exercise. Project goal included building a single HTML page displaying the 5-day weather forecast for a location of your choice.  
 
 Originally I wanted to build an application that allowed users to see the forecast information from the OpenWeatherMap 5 day weather forecast API using the city of Edinburgh - Uk as an example. I started this process by using the `create-react-app` boilerplate, then adding `styled-components`.  
 
