@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'Open Sans Condensed';
   letter-spacing: 1px;
@@ -11,3 +14,4 @@ h1 {
   font-size: 40px;
   color: #41444b;
 }
+`

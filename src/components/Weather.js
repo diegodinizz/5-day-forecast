@@ -27,6 +27,7 @@ const CityContainer = styled.div`
   font-size: 35px;
   font-weight: 600;
 `
+
 const DescriptionContainer = styled.div`
   font-size: 20px;
   display: flex;

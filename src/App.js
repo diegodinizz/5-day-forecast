@@ -3,7 +3,8 @@ import React from 'react'
 import { Weather } from './components/Weather'
 import { useFetch } from './components/hooks/useFetch'
 
-import './App.css'
+import { GlobalStyle } from './components/GlobalStyle'
+
 
 function App () {
   const [
@@ -16,7 +17,8 @@ function App () {
     sunset,
     sunrise,
     feelsLike,
-    humidity, weatherIcon
+    humidity,
+    weatherIcon
   ] = useFetch()
 
   return (
@@ -35,6 +37,7 @@ function App () {
         humidity={humidity}
         weatherIcon={weatherIcon}
       />
+      <GlobalStyle />
     </div>
   )
 }
