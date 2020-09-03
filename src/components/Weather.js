@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 22vw;
-  height: 500px;
+  height: 31em;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -16,6 +16,11 @@ const Container = styled.div`
   -webkit-box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
   -moz-box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
   box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
+
+  @media screen and (max-width: 300px) {
+    width: 100%;
+    padding: 0px;
+  }
 
   img {
     width: 48px;
