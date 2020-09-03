@@ -17,9 +17,8 @@ const Container = styled.div`
   -moz-box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
   box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
 
-  @media screen and (max-width: 300px) {
+  @media(max-width: 800px) {
     width: 100%;
-    padding: 0px;
   }
 
   img {
