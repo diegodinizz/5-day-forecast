@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 22vw;
-  height: 31em;
+  width: 20vw;
+  height: 29em;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -17,7 +17,7 @@ const Container = styled.div`
   -moz-box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
   box-shadow: 5px 5px 5px 0px rgba(82, 87, 93, 0.5);
 
-  @media(max-width: 800px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 
@@ -28,12 +28,12 @@ const Container = styled.div`
 `
 
 const CityContainer = styled.div`
-  font-size: 35px;
+  font-size: 2em;
   font-weight: 600;
 `
 
 const DescriptionContainer = styled.div`
-  font-size: 20px;
+  font-size: 1.3em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,7 +41,7 @@ const DescriptionContainer = styled.div`
 `
 
 const TemperatureContainer = styled.div`
-  font-size: 110px;
+  font-size: 6.5em;
   margin: 10px 0px 20px 20px;
 `
 
@@ -49,7 +49,7 @@ const DetailsContainer = styled.div`
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-size: 18px;
+  font-size: 1em;
 
   span {
     margin-top: 10px;
