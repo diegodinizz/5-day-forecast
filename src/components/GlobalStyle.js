@@ -6,6 +6,10 @@ body {
   letter-spacing: 1px;
   padding: 20px 60px;
   background: -webkit-gradient(linear, 77% 18%, 10% 21%, from(#b9d7ea), to(#769fcd));
+
+  @media(max-width: 800px) {
+    padding: 30px;
+  }
 }
 
 h1 {
@@ -15,7 +19,7 @@ h1 {
   color: #41444b;
 
   @media(max-width: 800px) {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 `
