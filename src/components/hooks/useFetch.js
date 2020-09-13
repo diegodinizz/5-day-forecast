@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const apiKey = 'a6437bf7ef8435da6240163dfdc4c346'
+import API_KEY from '../../api'
 
 export function useFetch () {
   const [name, setName] = useState('')
@@ -18,7 +18,7 @@ export function useFetch () {
   useEffect(() => {
     async function fetchUrl () {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=Edinburgh,uk&units=metric&APPID=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/weather?q=Edinburgh,uk&units=metric&APPID=${API_KEY}`
       )
       const data = await response.json()
 
