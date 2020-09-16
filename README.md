@@ -3,6 +3,18 @@ https://diegodinizz.github.io/5-day-forecast/
 
 An application used to check the currently Edinburgh - UK forecast, built with React, Styled Components, OpenWeatherMap 5 day weather forecast API and hosted on GitHub Pages.
 
+## Getting started
+
+- Sign up over at [openweathermap.org](https://openweathermap.org/appid) to get an API key.
+- Fork the project and clone it locally.
+- Create a file at the src folder of the project called `api.js` with the following contents:
+
+```sh
+const API_KEY = The API key you obtained from openweathermap.org
+
+export default API_KEY
+```
+
 ## Installation
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.
