@@ -4,7 +4,6 @@ export const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'Open Sans Condensed';
   letter-spacing: 1px;
-  /* padding: 20px 60px; */
   background: -webkit-gradient(linear, 77% 18%, 10% 21%, from(#b9d7ea), to(#769fcd));
 
   @media(max-width: 800px) {
