@@ -26,6 +26,11 @@ const Container = styled.div`
   }
 `
 
+const Loading = styled.div`
+  font-size: 1.5em;
+  font-weight: 600;
+`
+
 const CityContainer = styled.div`
   font-size: 2em;
   font-weight: 600;
@@ -62,7 +67,7 @@ const FeelsLikeHumidityContainer = styled(MinMaxContainer)`
 `
 
 export const Weather = () => {
-  const [weather, forecast] = useFetch()
+  const [weather, forecast, loading] = useFetch()
 
   const {
     city,
@@ -104,40 +109,46 @@ export const Weather = () => {
 
   return (
     <Container>
-      <CityContainer>
-        {city}, {country}
-      </CityContainer>
-      <DescriptionContainer>
-        {getDayOfWeek(date)}, {currentTime}, {description}
-      </DescriptionContainer>
-      <TemperatureContainer>
-        <WeatherIcon
-          src={`https://openweathermap.org/img/wn/${weather_icon}@2x.png`}
-          alt='weather-icon'
-        />
-        {Math.floor(temperature)}&deg;
-      </TemperatureContainer>
-      <MinMaxContainer>
-        <span>Max: {Math.floor(temp_max)}&deg;</span>
-        <span>Min: {Math.floor(temp_min)}&deg;</span>
-      </MinMaxContainer>
-      <SunriseSunsetContainer>
-        <span>Sunrise: {convertToTime(sunrise)}</span>
-        <span>Sunset: {convertToTime(sunset)}</span>
-      </SunriseSunsetContainer>
-      <FeelsLikeHumidityContainer>
-        <span>Feels Like: {Math.floor(feels_like)}&deg;</span>
-        <span>Humidity: {humidity}%</span>
-      </FeelsLikeHumidityContainer>
-      {forecast.map(items => (
-        <Forecast
-          key={items.date}
-          date={getDayOfWeek(items.date)}
-          forecastIcon={items.weather_icon}
-          tempMax={Math.floor(items.temp_max)}
-          tempMin={Math.floor(items.temp_min)}
-        />
-      ))}
+      {loading ? (
+        <Loading>Loading...</Loading>
+      ) : (
+        <>
+          <CityContainer>
+            {city}, {country}
+          </CityContainer>
+          <DescriptionContainer>
+            {getDayOfWeek(date)}, {currentTime}, {description}
+          </DescriptionContainer>
+          <TemperatureContainer>
+            <WeatherIcon
+              src={`https://openweathermap.org/img/wn/${weather_icon}@2x.png`}
+              alt='weather-icon'
+            />
+            {Math.floor(temperature)}&deg;
+          </TemperatureContainer>
+          <MinMaxContainer>
+            <span>Max: {Math.floor(temp_max)}&deg;</span>
+            <span>Min: {Math.floor(temp_min)}&deg;</span>
+          </MinMaxContainer>
+          <SunriseSunsetContainer>
+            <span>Sunrise: {convertToTime(sunrise)}</span>
+            <span>Sunset: {convertToTime(sunset)}</span>
+          </SunriseSunsetContainer>
+          <FeelsLikeHumidityContainer>
+            <span>Feels Like: {Math.floor(feels_like)}&deg;</span>
+            <span>Humidity: {humidity}%</span>
+          </FeelsLikeHumidityContainer>
+          {forecast.map(items => (
+            <Forecast
+              key={items.date}
+              date={getDayOfWeek(items.date)}
+              forecastIcon={items.weather_icon}
+              tempMax={Math.floor(items.temp_max)}
+              tempMin={Math.floor(items.temp_min)}
+            />
+          ))}
+        </>
+      )}
     </Container>
   )
 }

@@ -5,6 +5,7 @@ import API_KEY from '../../api'
 export function useFetch () {
   const [currentWeather, setCurrentWeather] = useState({})
   const [forecast, setForecast] = useState([])
+  const [loading, setLoading] = useState(true)
 
   function handleResponse (response) {
     if (response.ok) {
@@ -54,11 +55,12 @@ export function useFetch () {
       if (Object.entries(data).length) {
         const mappedData = mapDataWeather(data)
         setCurrentWeather(mappedData)
+        setLoading(false)
       }
     }
 
     getWeather().catch(error => console.log(error.message))
-  }, [])
+  }, [loading])
 
   useEffect(() => {
     async function getForecast () {
@@ -73,11 +75,12 @@ export function useFetch () {
           forecast.push(mapDataForecast(data.list[i + 4]));
         }
         setForecast(forecast)
+        setLoading(false)
       }
     }
 
     getForecast().catch(error => console.log(error.message))
-  }, [])
+  }, [loading])
 
-  return [currentWeather, forecast]
+  return [currentWeather, forecast, loading]
 }
