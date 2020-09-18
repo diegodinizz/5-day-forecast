@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Forecast/> renders and matches the snapshot 1`] = `
+<Forecast
+  date="Monday"
+  forecastIcon="01n"
+  tempMax={12}
+  tempMin={7}
+>
+  <styled.div>
+    <div
+      className="sc-AxjAm gkGyEG"
+    >
+      <styled.span>
+        <span
+          className="sc-AxirZ eOkyMB"
+        >
+          Monday
+        </span>
+      </styled.span>
+      <styled.div>
+        <div
+          className="sc-AxiKw gBvfsy"
+        >
+          <img
+            alt="forecast-icon"
+            src="https://openweathermap.org/img/wn/01n@2x.png"
+          />
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="sc-AxhCb eOcLQV"
+        >
+          <span>
+            12
+            °
+          </span>
+          <span>
+            7
+            °
+          </span>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Forecast>
+`;
