@@ -5,6 +5,18 @@ An application used to check the currently Edinburgh - UK forecast, built with R
 
 <img width="1680" alt="screen" src="https://user-images.githubusercontent.com/47988806/93591983-44f64180-f9a9-11ea-8381-54be3019535a.png">
 
+## Getting started
+
+- Sign up over at [openweathermap.org](https://openweathermap.org/appid) to get an API key.
+- Fork the project and clone it locally.
+- Create a file at the src folder of the project called `api.js` with the following contents:
+
+```sh
+const API_KEY = The API key you obtained from openweathermap.org
+
+export default API_KEY
+```
+
 ## Installation
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.
